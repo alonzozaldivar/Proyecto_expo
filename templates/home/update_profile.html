@@ -1,0 +1,12 @@
+{% extends 'base/base.html' %}
+
+{% block title %} PROFILE UPDATE VIEW {% endblock title %}
+
+{% block content %}
+    <form action="" method="post" class="form">
+        {% csrf_token %}
+        {{ form }}
+        <button type="submit" class="btn btn-outline-success">Update Profile</button>
+        <a href="{{ request.META.HTTP_REFERER }}" class="btn btn-outline-warning">Cancel</a>
+    </form>
+{% endblock content %}

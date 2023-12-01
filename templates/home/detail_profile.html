@@ -1,0 +1,14 @@
+{% extends "base/base.html" %}
+
+{% block title %} PROFILE VIEW {% endblock title %}
+
+{% block content %}
+    <div class="card border-primary mb-3" style="max-width: 20rem;">
+        <div class="card-header">{{ profile }}</div>
+        <div class="card-body">
+        <h4 class="card-title">{{ profile.user.first_name }}</h4>
+        <p class="card-text">{{ profile.bio }}</p>
+        </div>
+    </div>
+    <a href="{% url 'home:update_profile' profile.id %}" class="btn btn-outline-warning">Update Profile</a> 
+{% endblock content %}
